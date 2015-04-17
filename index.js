@@ -14,7 +14,6 @@ http.createServer(function (req, res) {
 
     // NOTE ü and other german umlaute are contained in ISO 8859-1. See http://en.wikipedia.org/wiki/ISO/IEC_8859-1
     res.setHeader('Content-Disposition', 'inline; filename="Test für UMLAUTE.pdf"');
-    // res.setHeader('Content-Disposition', contentDisposition( 'Test für us.pdf', {type:'inline'} ));
     res.setHeader('Content-Length', pdfContent.length);
     res.setHeader('Connection', 'keep-alive');
 
